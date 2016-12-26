@@ -2,7 +2,7 @@
 //alfredo gallegos, 2016
 
 var square_size = 30;
-var grid_size = 900;
+var grid_size = 1800;
 
 getRandomColor = function() {
     COLORS = ["cyan", "magenta", "yellow"];
@@ -19,8 +19,8 @@ for(var v_offset = 0; v_offset <= grid_size; v_offset += square_size){
         context.beginPath();
         context.moveTo(h_offset, v_offset);
 
-        context.lineTo(h_offset, v_offset-square_size);
-        context.lineTo(h_offset + square_size, v_offset - square_size);
+        context.lineTo(h_offset + square_size, v_offset + square_size);
+        context.lineTo(h_offset + square_size, v_offset);
         context.closePath();
 
         context.fillStyle = getRandomColor();
@@ -30,8 +30,8 @@ for(var v_offset = 0; v_offset <= grid_size; v_offset += square_size){
         context.beginPath();
         context.moveTo(h_offset, v_offset);
 
-        context.lineTo(h_offset + square_size, v_offset);
-        context.lineTo(h_offset + square_size, v_offset - square_size);
+        context.lineTo(h_offset + square_size, v_offset + square_size);
+        context.lineTo(h_offset, v_offset + square_size);
         context.closePath();
 
         context.fillStyle = getRandomColor();
