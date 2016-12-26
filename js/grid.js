@@ -1,5 +1,13 @@
 //grid.js
 //alfredo gallegos, 2016
 
-paragraph = document.getElementById("paragraph");
-paragraph.textContent = "This shit is working";
+getRandomColor = function() {
+    COLORS = ["cyan", "magenta", "yellow"];
+    return COLORS[Math.floor(Math.random() * COLORS.length)];
+}
+
+canvas = document.getElementById("grid");
+context = canvas.getContext("2d");
+
+context.fillStyle = getRandomColor();
+context.fillRect(10, 10, 100, 100);
